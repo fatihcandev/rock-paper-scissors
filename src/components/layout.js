@@ -2,7 +2,6 @@ import React from "react"
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
-import '../styles/style.css'
 import 'tailwindcss/tailwind.css'
 
 const Layout = (props) => {
