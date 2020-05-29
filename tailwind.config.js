@@ -1,12 +1,12 @@
 module.exports = {
   purge: [],
   theme: {
-    gradients: theme => ({
+    gradients: {
       'main': {
         type: 'radial',
         colors: ['#1f3756', '#141539'],
       },
-    }),
+    },
     extend: {
       colors: {
         'dark-text': 'hsl(229, 25%, 31%)',

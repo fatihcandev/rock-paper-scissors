@@ -25,6 +25,7 @@
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
     "prettier": "2.0.5",
     "tailwindcss": "^1.4.6",
     "tailwindcss-plugins": "^0.3.0"
@@ -35,6 +36,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "build:css": "postcss src/styles/tailwind.css -c tailwind.config.js -o src/styles/style.css",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",

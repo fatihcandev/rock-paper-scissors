@@ -1,6 +1,6 @@
 import React from "react"
 
-const Header = (props) => (
+const Header = () => (
   <header className="sm:w-3/4 lg:w-1/2 sm:mx-auto">
     <div className="p-4 border-2 border-header-outline rounded-md flex items-center justify-between">
       <div className="flex flex-col">

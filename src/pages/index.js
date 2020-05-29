@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import pentagon from '../images/bg-pentagon.svg'
@@ -7,6 +7,24 @@ import paper from '../images/icon-paper.svg'
 import rock from '../images/icon-rock.svg'
 import lizard from '../images/icon-lizard.svg'
 import spock from '../images/icon-spock.svg'
+import rules from '../images/image-rules-bonus.svg'
+import closeIcon from '../images/icon-close.svg'
+
+const RulesM = (props) => {
+  return (
+    <div
+      className={
+        props.isRulesHidden
+          ? "fixed top-0 right-0 left-0 bottom-0 h-full bg-white flex flex-col z-20 items-center justify-between py-10 hidden"
+          : "fixed top-0 right-0 left-0 bottom-0 h-full bg-white flex flex-col z-20 items-center justify-between py-10"
+      }
+    >
+      <h1 className="text-2xl font-bold">RULES</h1>
+      <div className="p-6"><img src={rules} alt="rules" className="w-full h-auto" /></div>
+      <button onClick={props.onRulesClose}><img src={closeIcon} alt="close icon" /></button>
+    </div>
+  )
+}
 
 const Pentagon = () => {
   return (
@@ -40,14 +58,19 @@ const ChoiceIcon = (props) => {
 const Choice = (props) => {
   return (
     <div className="p-2 rounded-full self-center z-10" id={props.id}>
-      <div className="bg-white rounded-full p-3">
+      <div className={
+        props.choice === "spock" || props.choice === "paper"
+          ? "bg-white rounded-full py-2 px-3"
+          : "bg-white rounded-full p-3"
+      }
+      >
         <ChoiceIcon choice={props.choice} />
       </div>
     </div>
   )
 }
 
-const Choices = (props) => {
+const Choices = () => {
   return (
     <div className="flex flex-col my-16 sm:w-3/4 lg:w-1/2 sm:mx-auto">
       <Pentagon />
@@ -66,11 +89,16 @@ const Choices = (props) => {
   )
 }
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Choices />
-  </Layout>
-)
+const IndexPage = () => {
+  const [isRulesHidden, setIsRulesHidden] = useState(true);
+
+  return (
+    <Layout onRulesClick={() => setIsRulesHidden(false)}>
+      <RulesM isRulesHidden={isRulesHidden} onRulesClose={() => setIsRulesHidden(true)} />
+      <SEO title="Home" />
+      <Choices />
+    </Layout>
+  )
+}
 
 export default IndexPage
