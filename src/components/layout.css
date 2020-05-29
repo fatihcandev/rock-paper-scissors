@@ -1,0 +1,19 @@
+#scissors {
+  background: linear-gradient(to bottom, #ec9e0e, #eca922) no-repeat;
+}
+
+#paper {
+  background: linear-gradient(to bottom, #4865f4, #5671f5) no-repeat;
+}
+
+#rock {
+  background: linear-gradient(to bottom, #dc2e4e, #dd405d) no-repeat;
+}
+
+#lizard {
+  background: linear-gradient(to bottom, #834fe3, #8c5de5) no-repeat;
+}
+
+#spock {
+  background: linear-gradient(to bottom, #40b9ce, #52bed1) no-repeat;
+}
