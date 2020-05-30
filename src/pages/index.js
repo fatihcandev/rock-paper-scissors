@@ -142,7 +142,15 @@ const VersusChoice = ({ versusChoice, isResult }) => {
   )
 }
 
-const ResultText = ({ result, onAgainClick }) => {
+const ResultText = ({ result, onAgainClick, onWin }) => {
+
+  const handleWin = () => {
+    return onWin(result);
+  }
+
+  useEffect(() => {
+    handleWin();
+  }, [result]);
 
   return (
     <div className="flex flex-col items-center order-3 lg:order-2">
@@ -159,7 +167,7 @@ const ResultText = ({ result, onAgainClick }) => {
   )
 }
 
-const Result = ({ choice, versusChoice, onAgainClick }) => {
+const Result = ({ choice, versusChoice, onAgainClick, onWin }) => {
 
 
   return (
@@ -176,7 +184,7 @@ const Result = ({ choice, versusChoice, onAgainClick }) => {
         versusChoice === ""
           ? "" :
           <ResultText choice={choice} versusChoice={versusChoice} onAgainClick={onAgainClick}
-            result={checkResult(choice, versusChoice)} />
+            result={checkResult(choice, versusChoice)} onWin={onWin} />
       }
     </div>
   )
@@ -201,6 +209,10 @@ const IndexPage = () => {
     setTimeout(() => setVersusChoice(versusChoice), 1500);
   }
 
+  const handleWin = (result) => {
+    result === "YOU WIN" ? setScore(score + 1) : setScore(score);
+  }
+
   return (
     <Layout onRulesClick={() => setIsRulesHidden(false)} score={score}>
       <Rules isRulesHidden={isRulesHidden} onRulesClose={() => setIsRulesHidden(true)} />
@@ -208,6 +220,7 @@ const IndexPage = () => {
       {
         choice !== ""
           ? <Result choice={choice} versusChoice={versusChoice} onAgainClick={handleAgainClick}
+            onWin={handleWin}
           />
           : <Choices onChoice={handleChoice} />
       }
