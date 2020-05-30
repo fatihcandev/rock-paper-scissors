@@ -15,10 +15,10 @@ const RulesM = ({ isRulesHidden, onRulesClose }) => {
     <div
       className={
         isRulesHidden
-          ? `fixed top-0 right-0 left-0 bottom-0 h-full bg-white flex flex-col z-20 items-center 
-          justify-between py-10 hidden`
-          : `fixed top-0 right-0 left-0 bottom-0 h-full bg-white flex flex-col z-20 items-center 
-          justify-between py-10`
+          ? `hidden`
+          : `absolute top-0 right-0 left-0 bottom-0 bg-white flex flex-col z-20 items-center 
+          justify-between py-10 sm:mx-auto sm:my-8 sm:rounded-lg sm:w-3/4
+          md:w-3/5 md:my-12`
       }
     >
       <h1 className="text-2xl font-bold">RULES</h1>
@@ -83,7 +83,7 @@ const Choices = () => {
         <Choice id="spock" choice="spock" />
         <Choice id="paper" choice="paper" />
       </div>
-      <div className="flex justify-around mt-3 px-6 mobile-m:mt-6">
+      <div className="flex justify-around mt-3 px-6 mobile-m:mt-8 sm:px-10 md:px-16 md:mt-16">
         <Choice id="lizard" choice="lizard" />
         <Choice id="rock" choice="rock" />
       </div>

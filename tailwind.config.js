@@ -13,9 +13,13 @@ module.exports = {
         'score-text': 'hsl(229, 64%, 46%)',
         'header-outline': 'hsl(217, 16%, 45%)'
       },
-      screens: {
-        'mobile-m': '375px',
-      }
+    },
+    screens: {
+      'mobile-m': '375px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
     },
   },
   variants: {},

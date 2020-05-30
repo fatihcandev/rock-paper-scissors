@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "rock-paper-scissors",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A simple rock-paper-scissors game with additional choices. Test your guessing skills now!",
+  "version": "1.0",
+  "author": "Fatih Can <contact@fatihcan.dev>",
   "dependencies": {
     "gatsby": "^2.21.37",
     "gatsby-image": "^2.4.4",
@@ -33,9 +33,9 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "build:css": "postcss src/tailwind.css -c tailwind.config.js -o src/style.css",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",

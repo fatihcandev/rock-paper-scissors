@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Rock Paper Scissors`,
-    description: `Ready to test your rock paper scissors skills? Come on then! This is a challenge by Frontend Mentor.`,
+    description: `A simple rock-paper-scissors game with additional choices. Test your guessing skills now! This is a challenge by Frontend Mentor.`,
     author: `@fatihcandev`,
   },
   plugins: [
