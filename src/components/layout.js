@@ -4,12 +4,12 @@ import Footer from "./footer"
 import "./layout.css"
 import 'tailwindcss/tailwind.css'
 
-const Layout = (props) => {
+const Layout = ({ onRulesClick, children }) => {
   return (
     <div className="p-8 flex flex-col min-h-screen bg-main">
       <Header />
-      <main className="flex flex-col justify-between">{props.children}</main>
-      <Footer onRulesClick={props.onRulesClick} />
+      <main className="flex flex-col justify-between">{children}</main>
+      <Footer onRulesClick={onRulesClick} />
     </div>
   )
 }

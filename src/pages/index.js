@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React, { useState } from 'react'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 import pentagon from '../images/bg-pentagon.svg'
 import scissors from '../images/icon-scissors.svg'
 import paper from '../images/icon-paper.svg'
@@ -10,18 +10,20 @@ import spock from '../images/icon-spock.svg'
 import rules from '../images/image-rules-bonus.svg'
 import closeIcon from '../images/icon-close.svg'
 
-const RulesM = (props) => {
+const RulesM = ({ isRulesHidden, onRulesClose }) => {
   return (
     <div
       className={
-        props.isRulesHidden
-          ? "fixed top-0 right-0 left-0 bottom-0 h-full bg-white flex flex-col z-20 items-center justify-between py-10 hidden"
-          : "fixed top-0 right-0 left-0 bottom-0 h-full bg-white flex flex-col z-20 items-center justify-between py-10"
+        isRulesHidden
+          ? `fixed top-0 right-0 left-0 bottom-0 h-full bg-white flex flex-col z-20 items-center 
+          justify-between py-10 hidden`
+          : `fixed top-0 right-0 left-0 bottom-0 h-full bg-white flex flex-col z-20 items-center 
+          justify-between py-10`
       }
     >
       <h1 className="text-2xl font-bold">RULES</h1>
       <div className="p-6"><img src={rules} alt="rules" className="w-full h-auto" /></div>
-      <button onClick={props.onRulesClose}><img src={closeIcon} alt="close icon" /></button>
+      <button onClick={onRulesClose}><img src={closeIcon} alt="close icon" /></button>
     </div>
   )
 }
@@ -34,17 +36,17 @@ const Pentagon = () => {
   )
 }
 
-const ChoiceIcon = (props) => {
+const ChoiceIcon = ({ choice }) => {
   return (
     <div className="w-6">
       <img src={
-        props.choice === "scissors"
+        choice === "scissors"
           ? scissors
-          : props.choice === "paper"
+          : choice === "paper"
             ? paper
-            : props.choice === "rock"
+            : choice === "rock"
               ? rock
-              : props.choice === "lizard"
+              : choice === "lizard"
                 ? lizard
                 : spock
       }
@@ -55,16 +57,16 @@ const ChoiceIcon = (props) => {
   )
 }
 
-const Choice = (props) => {
+const Choice = ({ choice, id }) => {
   return (
-    <div className="p-2 rounded-full self-center z-10" id={props.id}>
+    <div className="p-2 rounded-full self-center z-10" id={id}>
       <div className={
-        props.choice === "spock" || props.choice === "paper"
+        choice === "spock" || choice === "paper"
           ? "bg-white rounded-full py-2 px-3"
           : "bg-white rounded-full p-3"
       }
       >
-        <ChoiceIcon choice={props.choice} />
+        <ChoiceIcon choice={choice} />
       </div>
     </div>
   )
