@@ -35,7 +35,6 @@
   ],
   "scripts": {
     "build": "gatsby build",
-    "build:css": "postcss src/tailwind.css -c tailwind.config.js -o src/style.css",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
