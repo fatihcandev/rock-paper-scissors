@@ -216,7 +216,7 @@ const IndexPage = () => {
   return (
     <Layout onRulesClick={() => setIsRulesHidden(false)} score={score}>
       <Rules isRulesHidden={isRulesHidden} onRulesClose={() => setIsRulesHidden(true)} />
-      <SEO title="Home" />
+      <SEO title="Rock Paper Scissors" />
       {
         choice !== ""
           ? <Result choice={choice} versusChoice={versusChoice} onAgainClick={handleAgainClick}
