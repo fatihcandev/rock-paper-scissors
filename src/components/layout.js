@@ -2,7 +2,8 @@ import React from "react"
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
-import 'tailwindcss/tailwind.css'
+import "../style.css"
+// import "tailwindcss/tailwind.css"
 
 const Layout = ({ onRulesClick, children }) => {
   return (

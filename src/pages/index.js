@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import pentagon from '../images/bg-pentagon.svg'
-import scissors from '../images/icon-scissors.svg'
-import paper from '../images/icon-paper.svg'
-import rock from '../images/icon-rock.svg'
-import lizard from '../images/icon-lizard.svg'
-import spock from '../images/icon-spock.svg'
-import rules from '../images/image-rules-bonus.svg'
-import closeIcon from '../images/icon-close.svg'
+import React, { useState } from "react"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import pentagon from "../images/bg-pentagon.svg"
+import scissors from "../images/icon-scissors.svg"
+import paper from "../images/icon-paper.svg"
+import rock from "../images/icon-rock.svg"
+import lizard from "../images/icon-lizard.svg"
+import spock from "../images/icon-spock.svg"
+import rules from "../images/image-rules-bonus.svg"
+import closeIcon from "../images/icon-close.svg"
 
 const RulesM = ({ isRulesHidden, onRulesClose }) => {
   return (
