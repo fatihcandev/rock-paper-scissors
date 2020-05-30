@@ -2,13 +2,12 @@ import React from "react"
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
-import "../style.css"
-// import "tailwindcss/tailwind.css"
+import "tailwindcss/tailwind.css"
 
-const Layout = ({ onRulesClick, children }) => {
+const Layout = ({ score, children, onRulesClick }) => {
   return (
-    <div className="p-8 flex flex-col min-h-screen bg-main">
-      <Header />
+    <div className="p-6 flex flex-col min-h-screen bg-main justify-between">
+      <Header score={score} />
       <main className="flex flex-col justify-between">{children}</main>
       <Footer onRulesClick={onRulesClick} />
     </div>

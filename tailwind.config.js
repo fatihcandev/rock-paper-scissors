@@ -12,6 +12,12 @@ module.exports = {
         'score-text': 'hsl(229, 64%, 46%)',
         'header-outline': 'hsl(217, 16%, 45%)'
       },
+      width: {
+        '72': '18rem',
+        '80': '20rem',
+        '88': '22rem',
+        '96': '24rem',
+      }
     },
     screens: {
       'mobile-m': '375px',
@@ -19,6 +25,7 @@ module.exports = {
       'md': '768px',
       'lg': '1024px',
       'xl': '1280px',
+      'ultra': '1440px',
     },
   },
   variants: {},
