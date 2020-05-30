@@ -3,6 +3,7 @@ module.exports = {
     title: `Rock Paper Scissors`,
     description: `A simple rock-paper-scissors game with additional choices. Test your guessing skills now! This is a challenge by Frontend Mentor.`,
     author: `@fatihcandev`,
+    image: `${__dirname}/src/images/meta-image.jpg`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
