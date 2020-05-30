@@ -59,7 +59,11 @@ const ChoiceIcon = ({ choice }) => {
 
 const Choice = ({ choice, id }) => {
   return (
-    <div className="p-2 rounded-full self-center z-10" id={id}>
+    <button
+      className="border-none p-2 rounded-full self-center z-10 focus:outline-none"
+      id={id}
+      onClick={() => alert(choice)}
+    >
       <div className={
         choice === "spock" || choice === "paper"
           ? "bg-white rounded-full py-2 px-3"
@@ -68,11 +72,11 @@ const Choice = ({ choice, id }) => {
       >
         <ChoiceIcon choice={choice} />
       </div>
-    </div>
+    </button>
   )
 }
 
-const Choices = () => {
+const Choices = ({ onChoice }) => {
   return (
     <div className="flex flex-col my-16 sm:w-3/4 lg:w-1/2 sm:mx-auto">
       <Pentagon />

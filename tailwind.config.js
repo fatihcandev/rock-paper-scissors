@@ -1,5 +1,8 @@
 module.exports = {
-  purge: [],
+  purge: [
+    './src/components/*.jsx',
+    './src/pages/*.jsx',
+  ],
   theme: {
     gradients: {
       'main': {
