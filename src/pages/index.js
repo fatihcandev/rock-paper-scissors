@@ -54,7 +54,7 @@ const ChoiceIcon = ({ choice, isResult }) => {
     <div
       className={
         isResult
-          ? "w-12 lg:w-16"
+          ? "w-6 mobile-m:w-8 md:w-12 xl:w-16"
           : "w-6 lg:w-8"
       }>
       <img src={
@@ -81,7 +81,7 @@ const Choice = ({ choice, id, onChoice, isResult }) => {
     <button
       className={
         isResult
-          ? "border-none p-2 rounded-full self-center z-10 focus:outline-none p-6 shadow-lg"
+          ? "border-none p-2 rounded-full self-center z-10 focus:outline-none mobile-m:p-4 md:p-6 shadow-lg"
           : "border-none p-2 rounded-full self-center z-10 focus:outline-none lg:p-3 shadow-lg"
 
       }
@@ -92,9 +92,9 @@ const Choice = ({ choice, id, onChoice, isResult }) => {
         (choice === "spock" || choice === "paper") && isResult === false
           ? "bg-white rounded-full py-2 px-3 lg:py-3 lg:px-4"
           : (choice === "spock" || choice === "paper") && isResult
-            ? "bg-white rounded-full py-4 px-6 lg:py-8 lg:px-10"
+            ? "bg-white rounded-full py-3 px-4 mobile-m:py-4 mobile-m:px-5 md:px-6 xl:py-8 xl:px-10"
             : isResult
-              ? "bg-white rounded-full p-6 lg:p-10"
+              ? "bg-white rounded-full p-3 mobile-m:p-4 md:p-6 xl:p-10"
               : "bg-white rounded-full p-3 lg:p-4"
       }
       >
@@ -137,7 +137,7 @@ const VersusChoice = ({ versusChoice, isResult }) => {
   return (
     <div className="flex flex-col items-center order-2 lg:order-3">
       <Choice choice={versusChoice} id={versusChoice} isResult={isResult} />
-      <h1 className="text-lg font-medium text-white mt-4">THE HOUSE PICKED</h1>
+      <h1 className="font-sm font-medium text-white mt-4">THE HOUSE PICKED</h1>
     </div>
   )
 }
